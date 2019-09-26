@@ -5,13 +5,13 @@ class DigitalClicker extends Component {
         super();
         this.state = {
             timesClicked: 0
-        }
+        };
     }
 
     handleClick = () => {
-        this.setState({
-            timesClicked: this.state.timesClicked + 1
-        })
+        this.setState((prevState) => ({
+            timesClicked: prevState.timesClicked + 1
+        }))
     }
 
     render() {
