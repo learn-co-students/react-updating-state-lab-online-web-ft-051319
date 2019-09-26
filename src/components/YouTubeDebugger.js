@@ -12,7 +12,7 @@ class YouTubeDebugger extends Component {
                     resolution: '1080p'
                 }
             }
-        }
+        };
     }
 
     changeBitrate = () => {
@@ -29,6 +29,7 @@ class YouTubeDebugger extends Component {
             settings: {
                 ...this.state.settings,
                 video: {
+                    ...this.state.settings.video,
                     resolution: '720p'
                 }
             }
@@ -38,8 +39,12 @@ class YouTubeDebugger extends Component {
     render() {
         return (
             <div>
-                <button className='bitrate' onClick={this.changeBitrate} ></button>
-                <button className='resolution' onClick={this.changeResolution} ></button>
+                <button className='bitrate' onClick={this.changeBitrate} >
+                    Change Bitrate
+                </button>
+                <button className='resolution' onClick={this.changeResolution} >
+                    Change Resolution
+                </button>
             </div>
         )
     }
